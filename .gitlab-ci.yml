@@ -1,0 +1,21 @@
+image:node:last
+
+stages:
+  -build
+  -dev
+
+  cache:
+    path:
+      -node_modules/
+
+  install_dependicies:
+    stage:build
+    script:
+      -npm install
+    cache:
+      -path:
+        -node_modules/
+
+    testing_testing:
+        stage:test
+        script:npm run test
